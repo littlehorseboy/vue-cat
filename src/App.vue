@@ -9,8 +9,10 @@
       <div class="mdl-layout__drawer" ref="mdlLayoutDrawer">
         <span class="mdl-layout-title">CropChat</span>
         <nav class="mdl-navigation">
-          <router-link :to="{ name: 'HomeView' }" class="mdl-navigation__link" @click.native="hideMenu">Home</router-link>
-          <router-link :to="{ name: 'PostView' }" class="mdl-navigation__link" @click.native="hideMenu">Post a picture</router-link>
+          <router-link :to="{ name: 'HomeView' }"
+            class="mdl-navigation__link" @click.native="hideMenu">Home</router-link>
+          <router-link :to="{ name: 'PostView' }"
+            class="mdl-navigation__link" @click.native="hideMenu">Post a picture</router-link>
         </nav>
       </div>
       <main class="mdl-layout__content">
@@ -29,7 +31,7 @@ import 'material-design-lite';
 export default {
   name: 'App',
   methods: {
-    hideMenu () {
+    hideMenu() {
       this.$refs.mdlLayoutDrawer.classList.remove('is-visible');
       document.getElementsByClassName('mdl-layout__obfuscator')[0].classList.remove('is-visible');
     },

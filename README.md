@@ -1,30 +1,11 @@
-# vue-arcgis-test
+# vue-cat
+這裡的 code 幾乎都是參照某位大大的教學而來的
+[A progressive Web application with Vue JS, Webpack & Material Design](https://blog.sicara.com/a-progressive-web-application-with-vue-js-webpack-material-design-part-1-c243e2e6e402/)
 
-> A Vue.js project
+還有幾篇還沒做完 (或者說很多都不會做 :sweat_smile: )
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+- PWA
+- vue init pwa
+- Material Design Lite
+- manifest.json (我根本跳過這個重要東西)
+- Firebase (目前讀不到 -.-)

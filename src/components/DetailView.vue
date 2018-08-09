@@ -25,15 +25,13 @@
 import { find } from 'lodash';
 
 export default {
-  data () {
+  data() {
     return {
       cat: '',
     };
   },
-  mounted () {
-    this.cat = find(this.$root.cat, (cat) => {
-      return cat['.key'] === this.$route.params.id;
-    });
+  mounted() {
+    this.cat = find(this.$root.cat, cat => cat['.key'] === this.$route.params.id);
   },
 };
 </script>

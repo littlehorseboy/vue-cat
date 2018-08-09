@@ -3,8 +3,9 @@
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
-        <div v-for="(picture, index) in this.$root.cat" :key="index" class="image-card" @click="displayDetails(picture['.key'])">
-          <!-- <pre>{{ picture }}</pre> -->
+        <div v-for="(picture, index) in this.$root.cat" :key="index"
+          class="image-card" @click="displayDetails(picture['.key'])">
+          <pre>{{ picture }}</pre>
           <div class="image-card__picture">
             <img :src="picture.url">
           </div>
@@ -14,9 +15,9 @@
         </div>
       </div>
     </div>
-    <a class="add-picture-button mdl-button mdl-js-button mdl-button--fab mdl-button--colored" href="/#/post">
+    <router-link :to="{ name: 'PostView' }" class="add-picture-button mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
       <i class="material-icons">add</i>
-    </a>
+    </router-link>
   </div>
 </template>
 
@@ -24,15 +25,18 @@
 import data from '../data';
 
 export default {
-  data () {
+  data() {
     return {
       pictures: data.pictures,
     };
   },
   methods: {
-    displayDetails (id) {
-      this.$router.push({ name: 'DetailView', params: { id: id } });
+    displayDetails(id) {
+      this.$router.push({ name: 'DetailView', params: { id } });
     },
+  },
+  mounted() {
+    debugger;
   },
 };
 </script>
